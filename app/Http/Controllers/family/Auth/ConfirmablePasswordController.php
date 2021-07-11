@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Family\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -17,7 +17,7 @@ class ConfirmablePasswordController extends Controller
      */
     public function show()
     {
-        return view('auth.confirm-password');
+        return view('family.auth.confirm-password');
     }
 
     /**
@@ -28,7 +28,7 @@ class ConfirmablePasswordController extends Controller
      */
     public function store(Request $request)
     {
-        if (! Auth::guard('web')->validate([
+        if (! Auth::guard('families')->validate([
             'email' => $request->user()->email,
             'password' => $request->password,
         ])) {
@@ -37,8 +37,8 @@ class ConfirmablePasswordController extends Controller
             ]);
         }
 
-        $request->session()->put('auth.password_confirmed_at', time());
+        $request->session()->put('family.auth.password_confirmed_at', time());
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended(RouteServiceProvider::FAMILY_HOME);
     }
 }
