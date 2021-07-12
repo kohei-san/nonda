@@ -22,11 +22,11 @@ use App\Http\Controllers\Family\Auth\VerifyEmailController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('family.welcome');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('family.dashboard');
 })->middleware(['auth:families'])->name('dashboard');
 
 // auth.php
