@@ -19,7 +19,7 @@ class FamilyController extends Controller
     {
         $families = Family::select('name', 'email', 'created_at')->get();
 
-        return view('admin.families.index',
+        return view('admin.family.index',
         compact('families'));
     }
 
@@ -30,7 +30,7 @@ class FamilyController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.family.create');
     }
 
     /**
