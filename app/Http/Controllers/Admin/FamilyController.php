@@ -19,7 +19,7 @@ class FamilyController extends Controller
 
     public function index()
     {
-        $families = Family::select('name', 'email', 'created_at')->get();
+        $families = Family::select('id','name', 'email', 'created_at')->get();
 
         return view('admin.family.index',
         compact('families'));
@@ -78,7 +78,8 @@ class FamilyController extends Controller
      */
     public function edit($id)
     {
-        //
+        $family = Family::findOrFail($id);
+        return view('admin.family.edit', compact('family'));
     }
 
     /**
@@ -90,7 +91,15 @@ class FamilyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $family = Family::findOrFail($id);
+        $family->name = $request->name;
+        $family->email = $request->email;
+        $family->password = Hash::make($request->password);
+        $family->save();
+
+        return redirect()
+        ->route('admin.family.index')
+        ->with('message', '家族情報を編集しました。');
     }
 
     /**

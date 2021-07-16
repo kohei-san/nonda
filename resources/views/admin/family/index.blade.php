@@ -24,6 +24,7 @@
                       <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">名前</th>
                       <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">メールアドレス</th>
                       <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">作成日</th>
+                      <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100"></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -32,6 +33,9 @@
                         <td class="px-4 py-3">{{ $family->name }}</td>
                         <td class="px-4 py-3">{{ $family->email }}</td>
                         <td class="px-4 py-3">{{ $family->created_at->diffForHumans() }}</td>
+                        <td>
+                          <button onclick="location.href='{{ route('admin.family.edit', ['family'=> $family->id]) }}'" class="text-white bg-gray-300 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded">編集</button>
+                        </td>
                       </tr>
                     @endforeach
                   </tbody>
