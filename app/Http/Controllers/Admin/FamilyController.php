@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Family;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
+
 
 class FamilyController extends Controller
 {
@@ -41,7 +43,20 @@ class FamilyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:families',
+            'password' => 'required|confirmed|min:8',
+        ]);
+
+        Family::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        return redirect()->route('admin.family.index')
+        ->with('message', '家族登録を完了しました。');
     }
 
     /**
