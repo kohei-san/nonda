@@ -99,7 +99,8 @@ class FamilyController extends Controller
 
         return redirect()
         ->route('admin.family.index')
-        ->with('message', '家族情報を編集しました。');
+        ->with(['message' => '家族情報を編集しました。',
+        'status' => 'info']);
     }
 
     /**
@@ -110,6 +111,11 @@ class FamilyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Family::findOrFail($id)->delete(); //ソフトデリート
+
+        return redirect()
+        ->route('admin.family.index')
+        ->with(['message' => '家族情報を削除しました。',
+        'status' => 'alert']);
     }
 }
