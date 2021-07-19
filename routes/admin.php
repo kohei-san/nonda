@@ -29,6 +29,15 @@ Route::get('/', function () {
 Route::resource('family', FamilyController::class)
     ->middleware('auth:admin');
 
+Route::prefix('suspended-family')
+    ->middleware('auth:admin')
+    ->group(function(){
+        Route::get('index', [FamilyController::class, 'suspendedFamilyIndex'])
+            ->name('suspended-family.index');
+        Route::post('destroy/{family}', [FamilyController::class, 'suspendedFamilyDestroy'])
+            ->name('suspended-family.destroy');
+    });
+
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth:admin'])->name('dashboard');

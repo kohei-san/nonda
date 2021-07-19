@@ -118,4 +118,16 @@ class FamilyController extends Controller
         ->with(['message' => '家族情報を削除しました。',
         'status' => 'alert']);
     }
+
+    public function suspendedFamilyIndex()
+    {
+        $suspendedFamilies = Family::onlyTrashed()->get();
+        return view('admin.suspended-family', compact('suspendedFamilies'));
+    }
+
+    public function suspendedFamilyDestroy($id)
+    {
+        Family::onlyTrashed()->findOrFail($id)->forceDelete();
+        return redirect()->route('admin.suspended-family.index');
+    }
 }
