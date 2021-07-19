@@ -15,6 +15,12 @@
                     <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('admin.family.index')" :active="request()->routeIs('admin.family.index')">
+                        family管理
+                    </x-nav-link>
+                    <x-nav-link :href="route('admin.suspended-family.index')" :active="request()->routeIs('admin.suspended-family.index')">
+                        停止中family一覧
+                    </x-nav-link>
                 </div>
             </div>
 
