@@ -35,6 +35,24 @@ class FamilySeeder extends Seeder
                 'password' => Hash::make('password'),
                 'created_at' => '2021/07/14 11:11:11'
             ],
+            [
+                'name' => 'family4',
+                'email' => 'family4@gmail.com',
+                'password' => Hash::make('password'),
+                'created_at' => '2021/07/14 11:11:11'
+            ],
+            [
+                'name' => 'family5',
+                'email' => 'family5@gmail.com',
+                'password' => Hash::make('password'),
+                'created_at' => '2021/07/14 11:11:11'
+            ],
+            [
+                'name' => 'family6',
+                'email' => 'family6@gmail.com',
+                'password' => Hash::make('password'),
+                'created_at' => '2021/07/14 11:11:11'
+            ],
         ]);
     }
 }

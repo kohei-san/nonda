@@ -22,12 +22,12 @@ use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 |
 */
 
-Route::get('/', function () {
-    return view('admin.welcome');
-});
+// Route::get('/', function () {
+//     return view('admin.welcome');
+// });
 
 Route::resource('family', FamilyController::class)
-    ->middleware('auth:admin');
+    ->middleware('auth:admin')->except(['show']);
 
 Route::prefix('suspended-family')
     ->middleware('auth:admin')
