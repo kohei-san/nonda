@@ -19,7 +19,8 @@ class FamilyController extends Controller
 
     public function index()
     {
-        $families = Family::select('id','name', 'email', 'created_at')->get();
+        $families = Family::select('id','name', 'email', 'created_at')
+            ->paginate(3);
 
         return view('admin.family.index',
         compact('families'));
