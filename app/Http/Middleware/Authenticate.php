@@ -21,11 +21,11 @@ class Authenticate extends Middleware
     {
         if (! $request->expectsJson()) {
             if(Route::is('admin.*')){
-                return route($this->$admin_route);
+                return route($this->admin_route);
             } elseif(Route::is('family.*')) {
-                return route($this->$family_route);
+                return route($this->family_route);
             } else {
-                return route($this->$user_route);
+                return route($this->user_route);
             }
         }
     }
