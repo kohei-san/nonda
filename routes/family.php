@@ -9,6 +9,7 @@ use App\Http\Controllers\Family\Auth\NewPasswordController;
 use App\Http\Controllers\Family\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Family\Auth\RegisteredUserController;
 use App\Http\Controllers\Family\Auth\VerifyEmailController;
+use App\Http\Controllers\Family\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,3 +84,6 @@ Route::post('/confirm-password', [ConfirmablePasswordController::class, 'store']
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:families')
                 ->name('logout');
+
+Route::resource('/message', MessageController::class)
+                ->middleware('auth:families');
