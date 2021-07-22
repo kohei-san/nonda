@@ -17,14 +17,8 @@ class CreateMessagesTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('message')->nullable();
-            $table->foreignId('image1')
-                ->constrained('images');
-            $table->foreignId('image2')
-                ->nullable()
-                ->constrained('images');
-            $table->foreignId('image3')
-                ->nullable()
-                ->constrained('images');
+            $table->string('image');
+            $table->string('image_title')->nullable();
             $table->foreignId('family_id')
                 ->constrained()
                 ->onUpload('cascade')
