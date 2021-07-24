@@ -15,7 +15,7 @@
                     <x-nav-link :href="route('family.dashboard')" :active="request()->routeIs('family.dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('family.message.index')" :active="request()->routeIs('family.message')">
+                    <x-nav-link :href="route('family.image.index')" :active="request()->routeIs('family.image')">
                         メッセージ一覧
                     </x-nav-link>
                 </div>
@@ -37,7 +37,7 @@
                     </x-slot>
                     
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('family.message.index')">
+                        <x-dropdown-link :href="route('family.image.index')">
                             メッセージ一覧
                         </x-dropdown-link>
                         <!-- Authentication -->
@@ -72,7 +72,7 @@
             <x-responsive-nav-link :href="route('family.dashboard')" :active="request()->routeIs('family.dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('family.message.index')" :active="request()->routeIs('family.message')">
+            <x-responsive-nav-link :href="route('family.image.index')" :active="request()->routeIs('family.image')">
                 メッセージ一覧
             </x-responsive-nav-link>
         </div>

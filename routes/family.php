@@ -9,7 +9,7 @@ use App\Http\Controllers\Family\Auth\NewPasswordController;
 use App\Http\Controllers\Family\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Family\Auth\RegisteredUserController;
 use App\Http\Controllers\Family\Auth\VerifyEmailController;
-use App\Http\Controllers\Family\MessageController;
+use App\Http\Controllers\Family\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,5 +85,5 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:families')
                 ->name('logout');
 
-Route::resource('/message', MessageController::class)
+Route::resource('/image', ImageController::class)
                 ->middleware('auth:families');

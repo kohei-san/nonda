@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Family;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class MessageController extends Controller
+class ImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        return view('family.message.index');
+        return view('family.image.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        return view('family.message.create');
+        return view('family.image.create');
     }
 
     /**
