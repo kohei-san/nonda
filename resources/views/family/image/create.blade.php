@@ -15,7 +15,7 @@
                       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">画像投稿</h1>
                     </div>
                     <div class="lg:w-1/2 md:w-2/3 mx-auto">
-                      <form action="{{ route('family.message.store') }}" method="post">
+                      <form action="{{ route('family.image.store') }}" method="post">
                         @csrf
                         <!-- Validation Errors -->
                         <x-auth-validation-errors class="mb-4" :errors="$errors" />

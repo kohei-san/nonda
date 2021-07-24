@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('family.image.index')" :active="request()->routeIs('family.image')">
-                        メッセージ一覧
+                        画像一覧
                     </x-nav-link>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                     
                     <x-slot name="content">
                         <x-dropdown-link :href="route('family.image.index')">
-                            メッセージ一覧
+                            画像一覧
                         </x-dropdown-link>
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('family.logout') }}">
@@ -73,7 +73,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('family.image.index')" :active="request()->routeIs('family.image')">
-                メッセージ一覧
+                画像一覧
             </x-responsive-nav-link>
         </div>
 
