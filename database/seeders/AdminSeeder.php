@@ -20,7 +20,7 @@ class AdminSeeder extends Seeder
         [
             'name' => 'admin',
             'email' => 'admin@gmail.com',
-            'password' => '12345678',
+            'password' => Hash::make('password'),
             'created_at' => '2021/07/14 11:11:11'
         ],
         [

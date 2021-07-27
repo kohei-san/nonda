@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('family.dashboard')" :active="request()->routeIs('family.dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('family.image.index')" :active="request()->routeIs('family.image')">
+                        画像一覧
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -32,8 +35,11 @@
                             </div>
                         </button>
                     </x-slot>
-
+                    
                     <x-slot name="content">
+                        <x-dropdown-link :href="route('family.image.index')">
+                            画像一覧
+                        </x-dropdown-link>
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('family.logout') }}">
                             @csrf
@@ -65,6 +71,9 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('family.dashboard')" :active="request()->routeIs('family.dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('family.image.index')" :active="request()->routeIs('family.image')">
+                画像一覧
             </x-responsive-nav-link>
         </div>
 
