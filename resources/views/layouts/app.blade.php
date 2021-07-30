@@ -18,9 +18,12 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @if(auth('admin')->user())
+            @php
+                $url = $_SERVER['REQUEST_URI'];
+            @endphp
+            @if(auth('admin')->user() && strpos($url, 'admin/'))
                 @include('layouts.admin-navigation')
-            @elseif(auth('families')->user())
+            @elseif(auth('families')->user() && strpos($url, 'family/'))
                 @include('layouts.family-navigation')
             @elseif(auth('users')->user())
                 @include('layouts.navigation')
