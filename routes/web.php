@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
+use App\Models\Image;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +21,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('user.dashboard');
+    $image = Image::first();
+
+    return view('user.dashboard', compact('image'));
 })->middleware(['auth:users'])->name('dashboard');
 
 require __DIR__.'/auth.php';
