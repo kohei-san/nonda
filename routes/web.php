@@ -26,4 +26,9 @@ Route::get('/dashboard', function () {
     return view('user.dashboard', compact('image'));
 })->middleware(['auth:users'])->name('dashboard');
 
+Route::get('/button', function(){
+    return view('user.button');
+})->middleware(['auth:users'])->name('button');;
+
 require __DIR__.'/auth.php';
+
