@@ -13,5 +13,7 @@
                 </div>
             </div>
         </div>
+        <x-user-button></x-user-button>
     </div>
 </x-app-layout>
+
