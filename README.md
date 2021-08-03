@@ -1,62 +1,68 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# アプリケーション名: Nonda?
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# アプリケーション概要
 
-## About Laravel
+### 家蔵のつながりと、健康をサポートするアプリです。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- 家族（主に別居されている高齢者）の健康を管理します。
+  - 薬やサプリの服用の際にボタンをクリックしてもらうことで、管理者ユーザーにメールで通知を送信します。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 薬の服用の辛さを和らげます。
+  - 服用後に家族の写真、メッセージを表示することで気持ちを和らげます。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- 大切な家族の記憶を守ります。
+  - 別居していても、毎日家族の写真を見ることで、家族のことを忘れません。（前日の投稿、なければランダムに表示されます。）
 
-## Learning Laravel
+# 制作のきっかけ、目指している課題解決
+**祖母は私のことを忘れてしまいました。**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+私の祖母は数年前から介護施設に入っていて、なかなか会う機会が得られません。
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+施設に入って初めの頃は、久しぶりに会っても祖母は私の名前を呼んでくれて、喜んでくれていました。
 
-## Laravel Sponsors
+しかし数年経つ間に、会っても祖母は私のことがわからず、手を握ろうとしても怖がって触れさせてもくれなくなってしまいました。
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+祖母が元気で生きていてくれることは嬉しいのですが、久しぶりに会えた時には笑顔がみたいと思ってしまうため、祖母に忘れられてしまったことはやはり寂しく感じてしまいます。
 
-### Premium Partners
+そんな祖母が、毎日顔をみてくれれば自分や家族のことを思い出してくれるかな、と考えて制作しています。
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+**現在、コロナ禍で老人介護施設への面会ができなくなり、家族の記憶が薄れていってしまっている方も多くいらっしゃると思います。**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+会ったときに、家族が自分のことを覚えてくれている。それだけでも介護や会いに行く気持ちが楽になるはずです。
 
-## Security Vulnerabilities
+また、共通の思い出がまとまっていると、家族との会話もスムーズになり、一緒の時間が楽しくなるはずです。
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+そんな方の役に立てればいいなとも考えています。
 
-## License
+# URL
+近日デプロイ予定です。
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## テスト用アカウント
+準備中
+
+## 利用方法
+
+1. 管理者を新規作成してください
+1. 管理者アカウントからユーザーを作成します。（服用を管理したい方のアカウントです。）
+1. 管理者アカウントから家蔵アカウントを作成します。(写真やメッセージのアップロードを行うアカウントです。)
+
+上記により、家族アカウントがアップロードした写真を、ユーザーが閲覧できるようになります。
+
+## 使用例動画
+### 画面遷移
+- ログイン→薬を飲んだボタン→写真表示
+
+[![Image from Gyazo](https://i.gyazo.com/d725eb19701252c3800b94248e35192e.gif)](https://gyazo.com/d725eb19701252c3800b94248e35192e)
+
+- アップロード画像一覧
+[![Image from Gyazo](https://i.gyazo.com/449d0595a5ce5e3504a1bfae8c4e3062.png)](https://gyazo.com/449d0595a5ce5e3504a1bfae8c4e3062)
+
+### 動作環境
+- PHP 8.0.6
+- Laravel8.4
+- MySQL
+- tailwindcss
+- SendgridAPI(実装予定)
