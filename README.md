@@ -66,3 +66,6 @@
 - MySQL
 - tailwindcss
 - SendgridAPI(実装予定)
+
+## データベース設計
+![nonda](https://user-images.githubusercontent.com/79580640/128128362-becd1fa1-b3a5-43d4-b31f-2a3a8c42dea5.png)
