@@ -21,6 +21,7 @@ class Family extends Authenticatable
         'name',
         'email',
         'password',
+        'admin_id',
     ];
 
     /**
