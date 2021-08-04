@@ -40,4 +40,12 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function families(){
+        return $this->hasMany(Family::class);
+    }
+
+    public function users(){
+        return $this->hasMany(User::class);
+    }
 }
