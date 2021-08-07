@@ -1,0 +1,19 @@
+
+:root{
+  /* red-400 */
+  --theme-color: #f87171;
+  /* red-500 */
+  --theme-color-hover: #ef4444;
+}
+
+.bg-theme{
+  background-color: var(--theme-color);
+}
+
+.hover\:bg-theme:hover {
+  background-color: var(--theme-color-hover);
+}
+
+.text-theme{
+  color: var(--theme-color);
+}

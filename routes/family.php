@@ -22,10 +22,6 @@ use App\Http\Controllers\Family\ImageController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('family.welcome');
-// });
-
 Route::get('/dashboard', function () {
     return view('family.dashboard');
 })->middleware(['auth:families'])->name('dashboard');
